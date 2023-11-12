@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.thanks-layout{
+    margin-top: rem(48);
+
+    @include mq(md){
+        margin-top: rem(120);
+    }
+}
+
+.thanks{
+    padding: 0 rem(8);
+    max-width: rem(616);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+
+    @include mq(md){
+        max-width: rem(1130);
+        padding: 0 rem(25);
+    }
+
+}
+
+.thanks__title{
+    font-size: rem(18);
+    font-weight: 400;
+    color: $black;
+    text-align: center;
+
+    @include mq(md){
+        font-size: rem(24);
+    }
+}
+
+.thanks__text{
+    font-size: rem(16);
+    font-weight: 400;
+    color: $black;
+    margin-top: rem(40);
+    text-align: center;
+}
+
+.thanks__btn{
+    text-align: center;
+    margin-top: rem(40);
+}

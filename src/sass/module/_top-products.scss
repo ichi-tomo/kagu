@@ -1,0 +1,250 @@
+@use "global" as *;
+
+.layout-top-products {
+    margin-top: rem(80);
+    padding-top: rem(48);
+    margin-bottom: 200px;
+}
+
+.top-products {
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 96%;
+        height: 62.27%;
+        background-image: url(../images/common/products-bg-sp.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+
+        @include mq(md){
+            max-width: 75.5555555556%;
+        }
+    }
+}
+
+.top-products__inner {
+    overflow: hidden;
+}
+
+.top-products__body {
+    @include mq(md){
+        display: flex;
+        column-gap: rem(75);
+        align-items: flex-start;
+    }
+}
+
+.top-products__content {
+    margin-top: rem(40);
+    @include mq(md){
+        width: min(39.4444444444vw,60%);
+        margin-top: rem(18);
+    }
+}
+
+.top-products__text {
+    font-size: rem(16);
+    font-weight: 400;
+    color: $black;
+    line-height: 1.5;
+    width: 95.3623188406%;
+
+    @include mq(md){
+        width: 100%;
+    }
+}
+
+.top-products__btn {
+    margin-top: rem(24);
+}
+
+.top-products__items {
+    margin-top: rem(88);
+
+    @include mq(md){
+        max-width: rem(1080);
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.top-products__item {
+    margin: 0 rem(12);
+    @include mq(md){
+        margin: 0;
+    }
+}
+
+.top-products__image {
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 66.6666666667%;
+
+        @include mq(md){
+
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.top-products__name {
+    font-size: rem(16);
+    font-weight: 400;
+    color: $black;
+    line-height: 1;
+    margin-top: rem(16);
+    padding-left: rem(8);
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: rem(6);
+        height: rem(6);
+        background: $green;
+        border-radius: 50%;
+        top: -30%;
+        left: 0;
+    }
+}
+
+.top-products__area {
+    font-size: rem(14);
+    font-weight: 400;
+    font-family: $second-font-family;
+    color: $black;
+    line-height: 1;
+    text-transform: capitalize;
+    margin-top: rem(2);
+}
+
+.top-products__item.slick-slide{
+            @include mq(md) {
+            transform: scale(.8); // スライドのサイズを80%にする
+            transition: transform .6s;
+            width: 100%;
+            height: auto;
+        }
+}
+
+.top-products__item.slick-center{
+            @include mq(md) {
+            transform: scale(1); // 中央のスライドは小さくしない
+        }
+}
+
+.slick-slide.is-active-next {
+        @include mq(md) {
+            transform: scale(1); // 中央のスライドは小さくしない
+        }
+}
+
+.top-products__items .slick-prev {
+    width: rem(46);
+    height: rem(46);
+    position:absolute;
+    border: 1px solid $green;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-175%);
+    top: 120%;
+    z-index: 1;
+
+    @include mq(md){
+        top: -17%;
+        left: 94%;
+        left: min(calc(100vw - 15%),94%) ;
+    }
+
+    &:before{
+        content: "";
+        position: absolute;
+        top: 47%;
+        left: 22%;
+        transform: rotate(-30deg);
+        width: rem(6);
+        height: rem(1);
+        background: $green;
+        transition: 0.6s;
+        opacity: 1;
+    }
+    
+    &:after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: rem(24);
+        height: rem(1);
+        background: $green;
+        transition: 0.6s;
+        opacity: 1;
+    }
+
+
+}
+
+.top-products__items .slick-next {
+    width: rem(46);
+    height: rem(46);
+    position: absolute;
+    border: 1px solid $green;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(75%);
+    top: 120%;
+
+    @include mq(md){
+        top: -17%;
+        left: 91%;
+        left: min(calc(100vw - 18%),91%) ;
+    }
+    
+    &:before{
+        content: "";
+        position: absolute;
+        top: 47%;
+        left: 65%;
+        transform: rotate(30deg);
+        width: rem(6);
+        height: rem(1);
+        background: $green;
+        transition: 0.6s;
+        opacity: 1;
+    }
+    
+    &:after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: rem(24);
+        height: rem(1);
+        background: $green;
+        transition: 0.6s;
+        opacity: 1;
+    }
+}

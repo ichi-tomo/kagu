@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.cards{
+    
+    @include mq(md){
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.cards__item{
+
+    @include mq(md){
+        width: calc((100% - rem(30) * 2) / 3);
+
+        &:nth-child(n + 4){//4枚目以降のカードの上部の余白
+            margin-top: rem(40);
+        }
+
+        &:not(:nth-child(3n - 2)){//3枚並びのカードの最初以外のカードの左側の余白
+            margin-left: rem(30);
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.products-layout{
+    margin-top: rem(48);
+
+    @include mq(md){
+        margin-top: rem(120);
+    }
+}
+
+.products__inner{
+    max-width: rem(630);
+    width: 100%;
+    margin: auto;
+    padding: 0 rem(15);
+
+    @include mq(md){
+        max-width: rem(1130);
+        padding: 0 rem(25);
+    }
+}
+
+.products__title{
+
+    @include mq(md){
+        margin-top: rem(42);
+    }
+}
+
+.products__head-text{
+    font-size: rem(16);
+    font-weight: 400;
+    color: $black;
+    margin-top: rem(16);
+
+    @include mq(md){
+        margin-top: rem(80);
+        width: 82.2222222222%;
+    }
+}
+
+.products__items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(15);
+    margin-top: rem(40);
+
+    @include mq(md){
+        gap: 0;
+    }
+}
+
+.products__item{
+    width: calc(50% - rem(7.5));
+
+    @include mq(md){
+        width: 25%;
+    }
+}
+
+.products__item.u-desktop{
+    display: none;
+
+    @include mq(md){
+        display: flex;
+    }
+}

@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.sns {
+    @include mq(md){
+        width: 12.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    
+        &:before{
+            content: "";
+            display: block;
+            width: rem(1);
+            height: rem(180);
+            background: $black;
+        }
+    }
+}
+
+.sns__instagram,
+.sns__twitter{
+    display: none;
+    @include mq(md){
+        display: block;
+        width: rem(24);
+        height: rem(24);
+    }
+}
+
+.sns__instagram{
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}
+
+.sns__twitter{
+    margin-top: rem(24);
+}

@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.btn{
+    font-size: rem(16);
+    font-family: $second-font-family;
+    font-weight: 400;
+    color: $black;
+    line-height: 1;
+    padding-top: rem(12);
+    padding-bottom: rem(10);
+    border: 1px solid $green;
+    display: inline-block;
+    text-align: center;
+    width: min(100%,rem(103));
+    position: relative;
+    @include mq(md){
+        padding-top: rem(5);
+        padding-bottom: rem(3);
+    }
+
+    &:before{
+        content: "";
+        position: absolute;
+        top: 57%;
+        right: rem(-20);
+        transform: translateY(calc(-50% - 2px)) rotate(30deg);
+        width: rem(6);
+        height: rem(1);
+        background: $black;
+        transition: 0.6s;
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 56%;
+        right: rem(-20);
+        transform: translateY(-50%);
+        width: rem(32);
+        height: rem(1);
+        background: $black;
+        transition: 0.6s;
+    }
+
+    &:hover{
+
+        &:before,&:after{
+            right: rem(-25);
+        }
+
+    }
+}
+
+// modifire
+
+.btn--white{
+    color: $white;
+    border: 1px solid $white;
+
+    &:before,&:after{
+        background: $white;
+    }
+}

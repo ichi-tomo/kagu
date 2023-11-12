@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.news-layout{
+    margin-top: rem(48);
+}
+
+.news__inner{
+    max-width: rem(600);
+    width: 100%;
+    margin: auto;
+    padding: 0 rem(15);
+
+    @include mq(md){
+        max-width: rem(1130);
+        padding: 0 rem(25);
+    }
+}
+

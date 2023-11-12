@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.sub-mv__title{
+    font-size: rem(40);
+    font-weight: 400;
+    font-family: $second-font-family;
+    color: $black;
+    text-align: center;
+
+    @include mq(md){
+        font-size: rem(64);
+    }
+}
+
+.sub-mv__body{
+    max-width: rem(630);
+    width: 100%;
+    padding: 0 rem(15);
+    margin: auto;
+
+    @include mq(md){
+        display: flex;
+        max-width: rem(1440);// 画面幅に合わせて拡大する場合は100％
+        padding: 0;
+    }
+}
+
+.sub-mv__image{
+    position: relative;
+    margin-top: rem(40);
+
+    @include mq(md){
+        width: 75%;
+    }
+
+    &:before{
+        content: "";
+        display: block;
+        padding-top: 75.07246376812%;
+
+        @include mq(md){
+            padding-top: 44.4444444444%;
+        }
+    }
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

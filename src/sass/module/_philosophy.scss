@@ -1,0 +1,105 @@
+@use "global" as *;
+
+.philosophy-layout{
+    margin-top: rem(48);
+}
+
+.philosophy {
+    position: relative;
+    padding-bottom: rem(40);
+
+    @include mq(md){
+        padding-top: rem(130);
+        padding-bottom: rem(130);
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        background-image: url(../images/common/philosophy-bg.webp);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 17.06666666667%;
+        height: 100%;
+        z-index: -1;
+
+        @include mq(md) {
+            width: 18.05555555556%;
+        }
+    }
+}
+
+.philosophy__inner {
+    max-width: rem(630);
+    width: 100%;
+    padding: 0 rem(15);
+    margin: auto;
+
+    @include mq(md){
+        max-width: rem(1130);
+        padding: 0 rem(25);
+        display: flex;
+        align-items: flex-start;
+
+    }
+}
+
+.philosophy__content{
+
+    @include mq(md){
+        width: 43.5185185185%;
+    }
+}
+
+.philosophy__head{
+    font-size: rem(32);
+    font-weight: 400;
+    color: $black;
+    margin-top: rem(32);
+
+    @include mq(md){
+        margin-top: rem(80);
+        font-size: rem(40);
+    }
+}
+
+.philosophy__text{
+    font-size: rem(16);
+    font-weight: 400;
+    color: black;
+    margin-top: rem(16);
+
+    @include mq(md){
+        margin-top: rem(24);
+    }
+}
+
+.philosophy__image {
+    width: 74.6666666667%;
+    position: relative;
+    margin-left: auto;
+    margin-top: rem(40);
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+
+    @include mq(md){
+        margin-top: 0;
+        width: 42.1296296296%;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

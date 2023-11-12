@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.section-title__en{
+    font-size: rem(40);
+    font-family: $second-font-family;
+    font-weight: 400;
+    color: $black;
+    line-height: 1;
+    text-transform: capitalize;
+    @include mq(md){
+        font-size: rem(64);
+        line-height: 1.25;
+    }
+}
+
+.section-title__ja{
+    font-size: rem(16);
+    font-weight: 400;
+    color: $black;
+    line-height: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: rem(12);
+    margin-top: rem(8);
+
+    @include mq(md){
+        line-height: 1.5;
+    }
+
+    &:before{
+        content: "";
+        display: block;
+        width: rem(80);
+        height: rem(1);
+        background: $black;
+    }
+}
