@@ -1414,7 +1414,7 @@ input[type=button] {
 }
 
 .single-news-layout {
-	margin-top: 3.6875rem;
+	padding-top: 6.25rem;
 }
 
 .single-news__sns.sns {
@@ -1583,6 +1583,10 @@ input[type=button] {
 
 .sns__twitter {
 	margin-top: 1.5rem;
+}
+
+.sub-mv-layout {
+	padding-top: 6.25rem;
 }
 
 .sub-mv__title {

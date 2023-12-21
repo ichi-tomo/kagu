@@ -41,25 +41,53 @@
 
 <body>
     <header class="header">
-        <div class="header__logo">
-            <a href="index.html">
-                <img src="./assets/images/common/CodeUps.webp" alt="">
-            </a>
-        </div><!-- /.header__logo -->
-        <div class="header__menu-btn">
-            <span></span>
-            <span></span>
-        </div><!-- /.header__menu-btn -->
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="./assets/images/common/CodeUps.webp" alt="">
+                </a>
+            </div><!-- /.header__logo -->
+            <div class="header__menu-btn js-drawer">
+                <span></span>
+                <span></span>
+            </div><!-- /.header__menu-btn -->
+        </div><!-- /.header__inner -->
     </header><!-- /.header -->
+    <div class="header__drawer">
+        <nav class="header__drawer-navigation">
+            <ul class="header__drawer-items">
+                <li class="header__drawer-item"><a href="page-about.html">about<span>私たちについて</span></a></li>
+                <!-- /.header__drawer-item -->
+                <li class="header__drawer-item"><a href="page-products.html">products<span>商品紹介</span></a></li>
+                <!-- /.header__drawer-item -->
+                <li class="header__drawer-item"><a href="page-works.html">works<span>納品事例</span></a></li>
+                <!-- /.header__drawer-item -->
+                <li class="header__drawer-item"><a href="page-company.html">company<span>会社概要</span></a></li>
+                <!-- /.header__drawer-item -->
+                <li class="header__drawer-item"><a href="home.html">news<span>ニュース</span></a></li>
+                <!-- /.header__drawer-item -->
+                <li class="header__drawer-item"><a href="page-contact.html">contact<span>お問い合わせ</span></a></li>
+                <!-- /.header__drawer-item -->
+            </ul><!-- /.header__drawer-items -->
+        </nav><!-- /.header__drawer-navigation -->
+        <div class="header__drawer-sns">
+            <a href="" class="header__drawer-instagram">
+                <img src="./assets/images/common/InstagramLogo.svg" alt="">
+            </a><!-- /.sns__instagram -->
+            <a href="" class="header__drawer-twitter">
+                <img src="./assets/images/common/TwitterLogo.svg" alt="">
+            </a><!-- /.sns__twitter -->
+        </div><!-- /.header__drawer-logos -->
+    </div><!-- /.header__drawer -->
     <main>
-        <section class="sub-mv">
+        <section class="sub-mv sub-mv-layout">
             <h1 class="sub-mv__title">Works</h1><!-- /.sub-mv__title -->
             <div class="sub-mv__body">
                 <div class="sub-mv__sns sns">
-                    <a href="" class="sns__instagram">
+                    <a href="#" class="sns__instagram">
                         <img src="./assets/images/common/InstagramLogo.svg" alt="">
                     </a><!-- /.sns__instagram -->
-                    <a href="" class="sns__twitter">
+                    <a href="#" class="sns__twitter">
                         <img src="./assets/images/common/TwitterLogo.svg" alt="">
                     </a><!-- /.sns__twitter -->
                 </div><!-- /.mv__sns -->
@@ -157,7 +185,7 @@
             <div class="footer__body">
                 <div class="footer__content">
                     <div class="footer__logo">
-                        <a href="">
+                        <a href="index.html">
                             <img src="./assets/images/common/CodeUps-white.webp" alt="">
                         </a>
                     </div><!-- /.footer__logo -->
@@ -169,13 +197,13 @@
                 <div class="footer__info">
                     <nav class="footer__navigation">
                         <ul class="footer__nav-items">
-                            <li class="footer__nav-item"><a href="">home</a></li><!-- /.footer__nav-item -->
-                            <li class="footer__nav-item"><a href="">about</a></li><!-- /.footer__nav-item -->
-                            <li class="footer__nav-item"><a href="">products</a></li><!-- /.footer__nav-item -->
-                            <li class="footer__nav-item"><a href="">works</a></li><!-- /.footer__nav-item -->
-                            <li class="footer__nav-item"><a href="">company</a></li><!-- /.footer__nav-item -->
-                            <li class="footer__nav-item"><a href="">news</a></li><!-- /.footer__nav-item -->
-                            <li class="footer__nav-item"><a href="">contact</a></li><!-- /.footer__nav-item -->
+                            <li class="footer__nav-item"><a href="index.html">home</a></li><!-- /.footer__nav-item -->
+                            <li class="footer__nav-item"><a href="page-about.html">about</a></li><!-- /.footer__nav-item -->
+                            <li class="footer__nav-item"><a href="page-products.html">products</a></li><!-- /.footer__nav-item -->
+                            <li class="footer__nav-item"><a href="page-works.html">works</a></li><!-- /.footer__nav-item -->
+                            <li class="footer__nav-item"><a href="page-company.html">company</a></li><!-- /.footer__nav-item -->
+                            <li class="footer__nav-item"><a href="home.html">news</a></li><!-- /.footer__nav-item -->
+                            <li class="footer__nav-item"><a href="page-contact.html">contact</a></li><!-- /.footer__nav-item -->
                         </ul><!-- /.footer__nav-items -->
                     </nav><!-- /.footer__navigation -->
                     <small class="footer__copy">&copy;2023 code ups.</small><!-- /.footer__copy -->
